@@ -1,12 +1,14 @@
 <ul class="nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Generateur</a>
+      <a class="nav-link" href="#">Generateur</a>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Races</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Orque</a>
         <a class="dropdown-item" href="#">Elfe</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" [routerLink]="'races'" href="#">Toutes</a>
       </div>
     </li>
     <li class="nav-item dropdown">
@@ -14,6 +16,8 @@
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Guerrier</a>
           <a class="dropdown-item" href="#">Mage</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [routerLink]="'classes'" href="#">Toutes</a>
         </div>
     </li>
     <li class="nav-item dropdown">
@@ -21,6 +25,8 @@
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Arc</a>
           <a class="dropdown-item" href="#">Epée</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [routerLink]="'armes'" href="#">Toutes</a>
         </div>
     </li>
-  </ul>
+</ul>

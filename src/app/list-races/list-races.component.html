@@ -1,1 +1,5 @@
-<p>list-races works!</p>
+<button *ngFor="let r of races" type="button" class="btn btn-primary btn-lg">
+    <p>{{r.name}}</p>
+    <p>Bonus de race: +{{r.bonusValue}} {{r.bonusCarac}}</p>
+</button>
+

@@ -12,6 +12,7 @@ import { ListClassesComponent } from './list-classes/list-classes.component';
 import { ListArmesComponent } from './list-armes/list-armes.component';
 
 
+
 const routes: Routes = [
   { path: 'races', component: ListRacesComponent },
   { path: 'classes', component: ListClassesComponent },
@@ -25,7 +26,8 @@ const routes: Routes = [
     NavComponent,
     ListArmesComponent,
     ListClassesComponent,
-    ListRacesComponent  ],
+    ListRacesComponent
+    ],
   imports: [
     BrowserModule,
     FormsModule,
