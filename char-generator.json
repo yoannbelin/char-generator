@@ -16,12 +16,14 @@
         {
             "id": 1,
             "name": "Elfe",
-            "bonus": {"carac": "int", "value": 2}
+            "bonusValue": 2,
+            "bonusCarac": "int"
         },
         {
             "id": 2,
             "name": "Orque",
-            "bonus": {"carac": "for", "value": 2}
+            "bonusValue": 2,
+            "bonusCarac": "for"
         }
     ],
 
