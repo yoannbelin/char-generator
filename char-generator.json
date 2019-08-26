@@ -1,0 +1,82 @@
+{
+    "armes": [
+        {
+            "id": 1,
+            "name": "Arc",
+            "damages": 4
+        },
+        {
+            "id": 2,
+            "name": "Epée",
+            "damages": 6
+        }
+    ],
+
+    "races": [
+        {
+            "id": 1,
+            "name": "Elfe",
+            "bonus": {"carac": "int", "value": 2}
+        },
+        {
+            "id": 2,
+            "name": "Orque",
+            "bonus": {"carac": "for", "value": 2}
+        }
+    ],
+
+    "classes": [
+        {
+            "id": 1,
+            "name": "Mage"
+        },
+        {
+            "id": 2,
+            "name": "Guerrier"
+        }
+    ],
+
+    "spells": [
+        {
+            "id": 1,
+            "name": "boule de feu",
+            "description": "lance une boule de feu sur 1 cible",
+            "classeId": 1
+        },
+        {
+            "id": 2,
+            "name": "armure de glace",
+            "description": "entoure le mage avec une armure de glace",
+            "classeId": 1
+        },
+        {
+            "id": 3,
+            "name": "enragement",
+            "description": "enrage le guerrier pour qu'il inflige plus de dégats",
+            "classeId": 2
+        },
+        {
+            "id": 4,
+            "name": "provocation",
+            "description": "provoque une cible qui est obligée d'attaquer le guerrier",
+            "classeId": 2
+        }
+    ],
+
+    "personnages": [
+        {
+            "id": 1,
+            "name": "imperath",
+            "hp": 100,
+            "for": 2,
+            "int": 5,
+            "dex": 3,
+            "sag": 5,
+            "cha": 2,
+            "con": 2,
+            "raceId": 1,
+            "armeId": 1,
+            "classeId": 1
+        }
+    ]
+}
