@@ -14,6 +14,10 @@ export class ArmeService {
     return this.http.get<Arme[]>('http://localhost:3000/armes');
   }
 
+  getArmeById(id: number): Observable<Arme> {
+    return this.http.get<Arme>('http://localhost:3000/armes/' + id);
+  }
+
   createArme(arme: Arme): Observable<Arme[]> {
     return this.http.post<Arme[]>('http://localhost:3000/armes', arme);
   }

@@ -1,4 +1,4 @@
-<button *ngFor="let r of races" type="button" class="btn btn-primary btn-lg">
+<button *ngFor="let r of races" [routerLink]="['/races', r.id]" type="button" class="btn btn-primary btn-lg">
     <p>{{r.name}}</p>
     <p>Bonus de race: +{{r.bonusValue}} {{r.bonusCarac}}</p>
 </button>

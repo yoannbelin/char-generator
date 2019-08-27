@@ -14,6 +14,10 @@ export class SpellService {
     return this.http.get<Spell[]>('http://localhost:3000/spells');
   }
 
+  getSpellsByIdClasse(id: number): Observable<Spell[]> {
+    return this.http.get<Spell[]>('http://localhost:3000/classes/' + id + '/spells');
+  }
+
   createSpell(spell: Spell): Observable<Spell[]> {
     return this.http.post<Spell[]>('http://localhost:3000/spells', spell);
   }

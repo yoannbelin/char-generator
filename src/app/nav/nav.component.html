@@ -5,8 +5,8 @@
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Races</a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Orque</a>
-        <a class="dropdown-item" href="#">Elfe</a>
+        <a class="dropdown-item" [routerLink]="'races/2'" href="#">Orque</a>
+        <a class="dropdown-item" [routerLink]="'races/1'" href="#">Elfe</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" [routerLink]="'races'" href="#">Toutes</a>
       </div>
@@ -14,8 +14,8 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Classes</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Guerrier</a>
-          <a class="dropdown-item" href="#">Mage</a>
+          <a class="dropdown-item" [routerLink]="'classes/2'" href="#">Guerrier</a>
+          <a class="dropdown-item" [routerLink]="'classes/1'" href="#">Mage</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" [routerLink]="'classes'" href="#">Toutes</a>
         </div>
@@ -23,8 +23,8 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Armes</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Arc</a>
-          <a class="dropdown-item" href="#">Epée</a>
+          <a class="dropdown-item" [routerLink]="'armes/1'" href="#">Arc</a>
+          <a class="dropdown-item" [routerLink]="'armes/2'" href="#">Epée</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" [routerLink]="'armes'" href="#">Toutes</a>
         </div>

@@ -1,0 +1,12 @@
+<h1>{{classe?.name}}</h1>
+
+<div class="row">
+    <div *ngFor="let s of spells" class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{s.name}}</h5>
+          <p class="card-text">{{s.description}}</p>
+        </div>
+      </div>
+    </div>
+</div>

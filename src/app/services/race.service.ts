@@ -14,6 +14,10 @@ export class RaceService {
     return this.http.get<Race[]>('http://localhost:3000/races');
   }
 
+  getRaceById(id: number): Observable<Race> {
+    return this.http.get<Race>('http://localhost:3000/races/' + id);
+  }
+
   createRace(race: Race): Observable<Race[]> {
     return this.http.post<Race[]>('http://localhost:3000/races', race);
   }

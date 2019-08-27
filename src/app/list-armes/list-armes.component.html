@@ -1,3 +1,12 @@
-<button *ngFor="let a of armes" type="button" class="btn btn-primary btn-lg">
-    <p>{{a.name}}</p>
-</button>
+
+<div *ngFor="let a of armes" class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Arme : {{a.name}}</h5>
+          <p class="card-text">Dégats : {{a.damages}}</p>
+          <a href="#" [routerLink]="['/armes', a.id]" class="btn btn-primary">Détails</a>
+        </div>
+      </div>
+    </div>
+</div>

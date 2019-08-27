@@ -14,6 +14,10 @@ export class ClasseService {
     return this.http.get<Classe[]>('http://localhost:3000/classes');
   }
 
+  getClasseById(id: number): Observable<Classe> {
+    return this.http.get<Classe>('http://localhost:3000/classes/' + id);
+  }
+
   createClasse(classe: Classe): Observable<Classe[]> {
     return this.http.post<Classe[]>('http://localhost:3000/classes', classe);
   }

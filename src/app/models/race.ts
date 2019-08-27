@@ -10,4 +10,5 @@ export class Race {
     name: string;
     bonusValue: number;
     bonusCarac: string;
+    language: string;
 }

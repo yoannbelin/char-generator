@@ -8,4 +8,7 @@ export class Arme {
     id: number;
     name: string;
     damages: number;
+    range: number;
+    price: number;
+    durability: number;
 }
