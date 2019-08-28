@@ -73,16 +73,20 @@
     {
       "id": 1,
       "name": "imperath",
-      "hp": 100,
+      "hp": 20,
+      "hpMax": 20,
       "for": 2,
       "int": 5,
       "dex": 3,
       "sag": 5,
       "cha": 2,
       "con": 2,
+      "dodge": 8,
+      "resistance": 4,
+      "volition": 10,
       "raceId": 1,
       "armeId": 1,
-      "classeId": 1
+      "classId": 1
     }
   ]
 }

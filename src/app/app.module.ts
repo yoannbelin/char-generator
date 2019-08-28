@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'classes', component: ListClassesComponent },
   { path: 'classes/:id', component: ClasseComponent},
   { path: 'armes', component: ListArmesComponent },
-  { path: 'armes/:id', component: ArmeComponent}
+  { path: 'armes/:id', component: ArmeComponent},
+  { path: 'generator', component: FormNewCharComponent}
 ];
 
 @NgModule({
@@ -39,7 +40,7 @@ const routes: Routes = [
     ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],

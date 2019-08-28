@@ -1,1 +1,73 @@
-<p>form-new-char works!</p>
+<h1>Formulaire</h1>
+​
+<div class="form-group">
+    <form [formGroup]="model">
+        <div>
+            <input formControlName="name" placeholder="Entrez le nom de votre personnage"/>
+            <div *ngIf="name.invalid && name.errors?.required">Ceci ne doit pas être vide</div> 
+        </div>
+        <div>
+            <input formControlName="for"/>
+            <div *ngIf="for.invalid && (for.errors?.min || for.errors?.max)">Ceci doit être compris entre 1 et 6</div> 
+            <div *ngIf="for.errors?.required">Ceci ne doit pas être vide</div> 
+        </div>
+        <div>
+            <input formControlName="int"/>
+            <div *ngIf="int.invalid && (for.errors?.min || for.errors?.max)">Ceci doit être compris entre 1 et 6</div>
+            <div *ngIf="int.errors?.required">Ceci ne doit pas être vide</div> 
+        </div>
+        <div>
+            <input formControlName="dex"/>
+            <div *ngIf="dex.invalid && (dex.errors?.min || dex.errors?.max)">Ceci doit être compris entre 1 et 6</div>
+            <div *ngIf="dex.errors?.required">Ceci ne doit pas être vide</div> 
+        </div>
+        <div>
+            <input formControlName="sag"/>
+            <div *ngIf="sag.invalid && (sag.errors?.min || sag.errors?.max)">Ceci doit être compris entre 1 et 6</div>
+            <div *ngIf="sag.errors?.required">Ceci ne doit pas être vide</div> 
+        </div>
+        <div>
+            <input formControlName="cha"/>
+            <div *ngIf="cha.invalid && (cha.errors?.min || cha.errors?.max)">Ceci doit être compris entre 1 et 6</div>
+            <div *ngIf="cha.errors?.required">Ceci ne doit pas être vide</div> 
+        </div>
+        <div>
+            <input formControlName="con"/>
+            <div *ngIf="con.invalid && (con.errors?.min || con.errors?.max)">Ceci doit être compris entre 1 et 6</div>
+            <div *ngIf="con.errors?.required">Ceci ne doit pas être vide</div> 
+        </div>
+    <br>
+    <div class="btn-group btn-group-toggle">
+        <label *ngFor="let r of races" class="btn btn-secondary">
+          <input id="option{{r.id}}" type="radio" value="{{r.id}}" name="race" formControlName="race"> {{r.name}}
+        </label>
+    </div>
+    <!--<div class="btn-group">
+        <div class="btn btn-secondary">
+          <input id="option1" type="radio" value="Male" name="race" formControlName="race"> Male
+        </div>
+        <div class="btn btn-secondary">
+          <input id="option2" type="radio" value="Femelle" name="race" formControlName="race"> Femelle
+        </div>
+    </div>-->
+<br>
+    <div class="btn-group btn-group-toggle">
+        <label *ngFor="let c of classes" class="btn btn-secondary">
+            <input id="option{{c.id}}" type="radio" value="{{c.id}}" name="classe" formControlName="classe"> {{c.name}}
+        </label>
+    </div>
+<br>
+    <div class="btn-group btn-group-toggle">
+        <label *ngFor="let a of armes" class="btn btn-secondary">
+          <input id="option{{a.id}}" type="radio" value="{{a.id}}" name="arme" formControlName="arme"> {{a.name}}
+        </label>
+    </div>
+    <button (click)="validationForm()" color="primary">Valider</button>
+<br>
+    </form>
+    <p>Form value: {{ model.value | json }}</p>
+</div>
+
+
+
+
