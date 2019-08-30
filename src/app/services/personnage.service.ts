@@ -14,8 +14,12 @@ export class PersonnageService {
     return this.http.get<Personnage[]>('http://localhost:3000/personnages');
   }
 
-  createPersonnage(personnage: Personnage): Observable<Personnage[]> {
-    return this.http.post<Personnage[]>('http://localhost:3000/personnages', personnage);
+  getPersoById(id: number): Observable<Personnage> {
+    return this.http.get<Personnage>('http://localhost:3000/personnages/' + id);
+  }
+
+  createPersonnage(personnage: Personnage): Observable<Personnage> {
+    return this.http.post<Personnage>('http://localhost:3000/personnages', personnage);
   }
 
   deletePersonnage(personnage: Personnage): Observable<Personnage[]> {

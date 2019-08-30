@@ -1,0 +1,60 @@
+<h1>{{perso?.name}}</h1>
+<h3>{{perso?.hp}} / {{perso?.hpMax}} PV</h3>
+<div class="inline">
+<table class="table table-striped col-lg-4">
+    <thead>
+      <tr>
+        <th scope="col">Caractéristique</th>
+        <th scope="col">Valeur</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">for</th>
+        <td>{{perso?.force}}</td>
+      </tr>
+      <tr>
+        <th scope="row">int</th>
+        <td>{{perso?.int}}</td>
+      </tr>
+      <tr>
+        <th scope="row">dex</th>
+        <td>{{perso?.dex}}</td>
+      </tr>
+      <tr>
+        <th scope="row">sag</th>
+        <td>{{perso?.sag}}</td>
+      </tr>
+      <tr>
+        <th scope="row">cha</th>
+        <td>{{perso?.cha}}</td>
+      </tr>
+      <tr>
+        <th scope="row">con</th>
+        <td>{{perso?.con}}</td>
+      </tr>
+    </tbody>
+</table>
+<table class="table table-striped col-lg-4">
+    <thead>
+      <tr>
+        <th scope="col">Caractéristique</th>
+        <th scope="col">Valeur</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Esquive</th>
+        <td>{{perso?.dodge}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Résistance</th>
+        <td>{{perso?.resistance}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Volonté</th>
+        <td>{{perso?.volition}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>

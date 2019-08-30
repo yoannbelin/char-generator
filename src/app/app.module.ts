@@ -13,6 +13,8 @@ import { ListArmesComponent } from './list-armes/list-armes.component';
 import { RaceComponent } from './race/race.component';
 import { ClasseComponent } from './classe/classe.component';
 import { ArmeComponent } from './arme/arme.component';
+import { ListPersosComponent } from './list-persos/list-persos.component';
+import { PersoComponent } from './perso/perso.component';
 
 
 
@@ -23,7 +25,9 @@ const routes: Routes = [
   { path: 'classes/:id', component: ClasseComponent},
   { path: 'armes', component: ListArmesComponent },
   { path: 'armes/:id', component: ArmeComponent},
-  { path: 'generator', component: FormNewCharComponent}
+  { path: 'generator', component: FormNewCharComponent},
+  { path: 'personnages', component: ListPersosComponent},
+  { path: 'personnages/:id', component: PersoComponent}
 ];
 
 @NgModule({
@@ -36,7 +40,9 @@ const routes: Routes = [
     ListRacesComponent,
     RaceComponent,
     ClasseComponent,
-    ArmeComponent
+    ArmeComponent,
+    ListPersosComponent,
+    PersoComponent
     ],
   imports: [
     BrowserModule,

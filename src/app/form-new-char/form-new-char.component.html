@@ -1,4 +1,5 @@
 <h1>Formulaire</h1>
+{{ nouveauPerso | json }}
 ​
 <div class="form-group">
     <form [formGroup]="model">
@@ -7,31 +8,37 @@
             <div *ngIf="name.invalid && name.errors?.required">Ceci ne doit pas être vide</div> 
         </div>
         <div>
+            <div>Force</div>
             <input formControlName="for"/>
             <div *ngIf="for.invalid && (for.errors?.min || for.errors?.max)">Ceci doit être compris entre 1 et 6</div> 
             <div *ngIf="for.errors?.required">Ceci ne doit pas être vide</div> 
         </div>
         <div>
+            <div>Intelligence</div>
             <input formControlName="int"/>
             <div *ngIf="int.invalid && (for.errors?.min || for.errors?.max)">Ceci doit être compris entre 1 et 6</div>
             <div *ngIf="int.errors?.required">Ceci ne doit pas être vide</div> 
         </div>
         <div>
+            <div>Déxterité</div>
             <input formControlName="dex"/>
             <div *ngIf="dex.invalid && (dex.errors?.min || dex.errors?.max)">Ceci doit être compris entre 1 et 6</div>
             <div *ngIf="dex.errors?.required">Ceci ne doit pas être vide</div> 
         </div>
         <div>
+            <div>Sagesse</div>
             <input formControlName="sag"/>
             <div *ngIf="sag.invalid && (sag.errors?.min || sag.errors?.max)">Ceci doit être compris entre 1 et 6</div>
             <div *ngIf="sag.errors?.required">Ceci ne doit pas être vide</div> 
         </div>
         <div>
+            <div>Charisme</div>
             <input formControlName="cha"/>
             <div *ngIf="cha.invalid && (cha.errors?.min || cha.errors?.max)">Ceci doit être compris entre 1 et 6</div>
             <div *ngIf="cha.errors?.required">Ceci ne doit pas être vide</div> 
         </div>
         <div>
+            <div>Constitution</div>
             <input formControlName="con"/>
             <div *ngIf="con.invalid && (con.errors?.min || con.errors?.max)">Ceci doit être compris entre 1 et 6</div>
             <div *ngIf="con.errors?.required">Ceci ne doit pas être vide</div> 

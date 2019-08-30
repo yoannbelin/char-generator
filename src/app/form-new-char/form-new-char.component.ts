@@ -7,6 +7,8 @@ import { ArmeService } from '../services/arme.service';
 import { Race } from '../models/race';
 import { Classe } from '../models/classe';
 import { Arme } from '../models/arme';
+import { PersonnageService } from '../services/personnage.service';
+import { pipe } from 'rxjs';
 
 @Component({
   selector: 'app-form-new-char',
@@ -15,19 +17,28 @@ import { Arme } from '../models/arme';
 })
 export class FormNewCharComponent implements OnInit {
 
+  nouveauPerso: Personnage;
+
   model: FormGroup;
 
   races: Race[];
 
+  racePerso: Race;
+
   classes: Classe[];
 
+  classePerso: Classe;
+
   armes: Arme[];
+
+  armePerso: Arme;
 
   constructor(
     private formBuilder: FormBuilder,
     private raceService: RaceService,
     private classeService: ClasseService,
-    private armeService: ArmeService) { }
+    private armeService: ArmeService,
+    private persoService: PersonnageService) { }
 
   ngOnInit() {
     this.raceService.getRaces().subscribe(
@@ -51,9 +62,9 @@ export class FormNewCharComponent implements OnInit {
       sag: [3, [Validators.max(6), Validators.min(1), Validators.required]],
       cha: [3, [Validators.max(6), Validators.min(1), Validators.required]],
       con: [3, [Validators.max(6), Validators.min(1), Validators.required]],
-      race: ['', [Validators.required]],
-      arme: ['', [Validators.required]],
-      classe: ['', [Validators.required]]
+      race: [null, [Validators.required]],
+      arme: [null, [Validators.required]],
+      classe: [null, [Validators.required]]
     });
   }
 
@@ -98,7 +109,38 @@ export class FormNewCharComponent implements OnInit {
   }
 
   validationForm() {
-    console.log(this.model);
+    if (this.model.valid) {
+      const racePromise = this.raceService.getRaceById(+this.model.get('race').value).toPromise() ;
+      const classPromise = this.classeService.getClasseById(+this.model.get('classe').value).toPromise();
+      const weaponPromise = this.armeService.getArmeById(+this.model.get('arme').value).toPromise();
+
+      Promise.all([racePromise, classPromise, weaponPromise])
+        .then(([race, classe, weapon]) => {
+            this.racePerso = race;
+            this.classePerso = classe;
+            this.armePerso = weapon;
+        })
+        .then( () => {
+          this.nouveauPerso = new Personnage(
+            this.model.get('name').value,
+            +this.model.get('for').value,
+            +this.model.get('int').value,
+            +this.model.get('dex').value,
+            +this.model.get('sag').value,
+            +this.model.get('cha').value,
+            +this.model.get('con').value,
+            this.racePerso,
+            this.armePerso,
+            this.classePerso
+          );
+          this.persoService.createPersonnage(this.nouveauPerso).subscribe();
+        })
+        .catch(error => {
+          console.log('Une erreur est survenue', error);
+        });
+
+
+    }
   }
 
 }

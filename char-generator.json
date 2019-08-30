@@ -87,6 +87,210 @@
       "raceId": 1,
       "armeId": 1,
       "classId": 1
+    },
+    {
+      "name": "yoann",
+      "force": 3,
+      "int": 3,
+      "dex": 3,
+      "sag": 3,
+      "cha": 3,
+      "con": 3,
+      "hpMax": 6,
+      "hp": 6,
+      "dodge": 6,
+      "resistance": 6,
+      "volition": 6,
+      "race": {
+        "id": 2,
+        "name": "Orque",
+        "bonusValue": 2,
+        "bonusCarac": "for",
+        "language": "Orque"
+      },
+      "classe": {
+        "id": 2,
+        "name": "Guerrier"
+      },
+      "arme": {
+        "id": 2,
+        "name": "Epée",
+        "damages": 6,
+        "range": 1,
+        "price": 100,
+        "durability": 20
+      },
+      "id": 2
+    },
+    {
+      "name": "test",
+      "force": 3,
+      "int": 3,
+      "dex": 3,
+      "sag": 3,
+      "cha": 3,
+      "con": 3,
+      "hpMax": 6,
+      "hp": 6,
+      "dodge": 6,
+      "resistance": 6,
+      "volition": 6,
+      "race": {
+        "id": 1,
+        "name": "Elfe",
+        "bonusValue": 2,
+        "bonusCarac": "int",
+        "language": "Elfique"
+      },
+      "classe": {
+        "id": 1,
+        "name": "Mage"
+      },
+      "arme": {
+        "id": 1,
+        "name": "Arc",
+        "damages": 4,
+        "range": 10,
+        "price": 50,
+        "durability": 20
+      },
+      "id": 3
+    },
+    {
+      "name": "test3",
+      "force": "5",
+      "int": "2",
+      "dex": 3,
+      "sag": "4",
+      "cha": 3,
+      "con": "5",
+      "hpMax": 10,
+      "hp": 10,
+      "dodge": "34",
+      "resistance": "55",
+      "volition": "24",
+      "race": {
+        "id": 2,
+        "name": "Orque",
+        "bonusValue": 2,
+        "bonusCarac": "for",
+        "language": "Orque"
+      },
+      "classe": {
+        "id": 2,
+        "name": "Guerrier"
+      },
+      "arme": {
+        "id": 2,
+        "name": "Epée",
+        "damages": 6,
+        "range": 1,
+        "price": 100,
+        "durability": 20
+      },
+      "id": 4
+    },
+    {
+      "name": "test4",
+      "force": "4",
+      "int": "2",
+      "dex": "5",
+      "sag": "4",
+      "cha": 3,
+      "con": "5",
+      "hpMax": 10,
+      "hp": 10,
+      "dodge": "54",
+      "resistance": "54",
+      "volition": "24",
+      "race": {
+        "id": 2,
+        "name": "Orque",
+        "bonusValue": 2,
+        "bonusCarac": "for",
+        "language": "Orque"
+      },
+      "classe": {
+        "id": 2,
+        "name": "Guerrier"
+      },
+      "arme": {
+        "id": 2,
+        "name": "Epée",
+        "damages": 6,
+        "range": 1,
+        "price": 100,
+        "durability": 20
+      },
+      "id": 5
+    },
+    {
+      "name": "test5",
+      "force": "5",
+      "int": "2",
+      "dex": "4",
+      "sag": "2",
+      "cha": 3,
+      "con": "5",
+      "hpMax": 10,
+      "hp": 10,
+      "dodge": "42",
+      "resistance": "55",
+      "volition": "22",
+      "race": {
+        "id": 2,
+        "name": "Orque",
+        "bonusValue": 2,
+        "bonusCarac": "for",
+        "language": "Orque"
+      },
+      "classe": {
+        "id": 2,
+        "name": "Guerrier"
+      },
+      "arme": {
+        "id": 2,
+        "name": "Epée",
+        "damages": 6,
+        "range": 1,
+        "price": 100,
+        "durability": 20
+      },
+      "id": 6
+    },
+    {
+      "name": "test6",
+      "force": 5,
+      "int": 3,
+      "dex": 2,
+      "sag": 4,
+      "cha": 3,
+      "con": 5,
+      "hpMax": 10,
+      "hp": 10,
+      "dodge": 6,
+      "resistance": 10,
+      "volition": 7,
+      "race": {
+        "id": 2,
+        "name": "Orque",
+        "bonusValue": 2,
+        "bonusCarac": "for",
+        "language": "Orque"
+      },
+      "classe": {
+        "id": 2,
+        "name": "Guerrier"
+      },
+      "arme": {
+        "id": 2,
+        "name": "Epée",
+        "damages": 6,
+        "range": 1,
+        "price": 100,
+        "durability": 20
+      },
+      "id": 7
     }
   ]
 }

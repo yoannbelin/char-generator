@@ -1,0 +1,4 @@
+<h1>Personnages</h1>
+<button *ngFor="let p of persos" [routerLink]="['/personnages', p.id]" type="button" class="btn btn-primary btn-lg">
+    <p>{{p.name}}</p>
+</button>
